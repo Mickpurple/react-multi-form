@@ -1,4 +1,4 @@
-import FormMain from "./components/FormMain";
+import FormMain from "./components/Form/FormMain";
 
 function App() {
   return (

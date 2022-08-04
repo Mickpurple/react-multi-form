@@ -1,6 +1,14 @@
 import React from "react";
 
-function FormPage1() {
+export default function FormPage1(props) {
+  const handleName = function (e) {
+    props.handleName(e.target.value);
+  };
+
+  const handleUsername = function (e) {
+    props.handleUsername(e.target.value);
+  };
+
   return (
     <div className="flex flex-col items-center justify-center gap-2 my-4">
       <p className="text-3xl font-semibold">Welcome! First things first...</p>
@@ -11,6 +19,7 @@ function FormPage1() {
         <p className="text-sm">Full Name</p>
       </div>
       <input
+        onChange={handleName}
         type="text"
         placeholder="Dustin Henderson"
         className="border rounded-md mt-2 mb-4 p-2 w-96 h-10"
@@ -19,6 +28,7 @@ function FormPage1() {
         <p className="text-sm">Display Name</p>
       </div>
       <input
+        onChange={handleUsername}
         type="text"
         placeholder="Dusty-Bun"
         className="border rounded-md mt-2 mb-4 p-2 w-96 h-10"
@@ -26,5 +36,3 @@ function FormPage1() {
     </div>
   );
 }
-
-export default FormPage1;
