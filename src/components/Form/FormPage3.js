@@ -18,6 +18,7 @@ export default function FormPage3(props) {
         <div className="card relative">
           <input
             onChange={handleUsage}
+            checked
             id="card1"
             type="radio"
             name="radio"
